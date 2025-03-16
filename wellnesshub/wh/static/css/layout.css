@@ -72,6 +72,30 @@
     color: white;
 }
 
-@media screen {
-    
+.burger {
+    display: none;
+}
+
+@media screen and (max-width: 720px) {
+    .nav {
+        display: none;
+    }
+
+    .burger {
+        position: absolute;
+        top: 50%;
+        right: 40px;
+        transform: translateY(-50%);
+        width: max-content;
+        height: max-content;
+    }
+
+    .burger-span {
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 10px;
+        margin-bottom: 10px;
+        background-color: black;
+    }
 }
