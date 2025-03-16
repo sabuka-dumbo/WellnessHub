@@ -20,7 +20,7 @@
     grid-column-start: 2;
     grid-column-end: 3;
 
-    grid-template-rows: 0;
+    grid-template-rows: 20px calc((100% - 60px) / 5) 5px calc((100% - 60px) / 5) 5px calc((100% - 60px) / 5) 5px calc((100% - 60px) / 5) 5px calc((100% - 60px) / 5) 20px;
     grid-template-columns: 20px calc((100% - 165px) /2) 5px 100px 20px calc((100% - 165px) /2) 20px;
 }
 
@@ -35,24 +35,11 @@
     font-weight: bold;
     grid-column-start: 2;
     grid-column-end: 3;
-    grid-row: 1;
-}
-
-.calc_height {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: max-content;
-    font-size: 20px;
-    font-family: "Marcellus";
-    font-weight: bold;
-    grid-column-start: 2;
-    grid-column-end: 3;
+    display: inline-grid;
     grid-row: 2;
 }
 
-.calc_weight {
+.calc_field1 {
     position: relative;
     top: 0;
     left: 0;
@@ -62,7 +49,56 @@
     font-family: "Marcellus";
     font-weight: bold;
     grid-column-start: 2;
+    grid-row: 4;
     grid-column-end: 3;
+    display: inline-grid;
+    padding: 0;
+    margin: 0;
+}
+
+.calc_field2 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    font-size: 20px;
+    font-family: "Marcellus";
+    font-weight: bold;
+    grid-column-start: 2;
+    grid-row: 6;
+    grid-column-end: 3;
+    display: inline-grid;
+}
+
+.calc_field3 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    font-size: 20px;
+    font-family: "Marcellus";
+    font-weight: bold;
+    grid-column-start: 2;
+    grid-row: 8;
+    grid-column-end: 3;
+    display: inline-grid;
+}
+
+.calc_field4 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    font-size: 20px;
+    font-family: "Marcellus";
+    font-weight: bold;
+    grid-column-start: 2;
+    grid-row: 10;
+    grid-column-end: 3;
+    display: inline-grid;
 }
 
 .other-div {
