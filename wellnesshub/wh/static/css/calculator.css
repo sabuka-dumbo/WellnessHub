@@ -588,10 +588,20 @@
         height: max-content;
     }
 
+    .calc_field3 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row: 8;
+    }
+
     .calc_field5 {
         grid-column-start: 2;
         grid-column-end: 3;
         grid-row: 11;
+    }
+
+    .calculator-title {
+        margin-top: 30px;
     }
 }
 
