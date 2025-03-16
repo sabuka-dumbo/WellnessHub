@@ -339,25 +339,89 @@
     outline: none;
 }
 
+.MorFradio {
+    position: relative;
+    top: 0;
+    left: 0;
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row: 8;
+}
+
 .female_radio {
     position: relative;
     top: 0;
     left: 0;
     width: 20px;
     height: 20px;
-    background-color: ;
+    background-color: white;
+    border: #777777 solid 2px;
+}
+
+.male_radio {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: #777777 solid 2px;
+}
+
+.female_radio_text {
+    position: relative;
+    top: -5px;
+    left: 0;
+    width: max-content;
+    height: max-content;
+    font-family: "Itim";
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.male_radio_text {
+    position: relative;
+    top: -5px;
+    left: 0;
+    width: max-content;
+    height: max-content;
+    font-family: "Itim";
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.submit {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #C1D8C3;
+    color: #777777;
+    border: none;
+    outline: none;
+    grid-column-start: 6;
+    grid-column-end: 9;
+    grid-row: 10;
+    font-family: "Itim";
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .other-div {
     position: relative;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 300px;
+    width: calc(100% - 20px);
+    height: 290px;
     background-color: white;
     box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.201);
     grid-column-start: 4;
     grid-column-end: 5;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .result-div {
