@@ -77,7 +77,7 @@
 }
 
 .navboard {
-    display: none;
+    display: block;
 }
 
 @media screen and (max-width: 720px) {
@@ -95,6 +95,13 @@
         display: block;
     }
 
+    .span1 {
+        position: relative;
+        top: 10px;
+        right: 40px;
+        transform: none;
+    }
+
     .burger-span {
         position: relative;
         top: 0;
@@ -109,8 +116,8 @@
     .navboard {
         position: fixed;
         top: 0;
-        left: 0;
-        width: 60vw;
+        left: -100%;
+        width: 65vw;
         height: 100vh;
         background-color: #2DAA9E;
         display: block;
@@ -144,4 +151,8 @@
     .burger {
         right: 20px;
     }
+}
+
+@keyframes span1_open {
+    
 }
