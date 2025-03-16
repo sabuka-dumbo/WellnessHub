@@ -35,6 +35,7 @@
     font-weight: bold;
     grid-column-start: 2;
     grid-column-end: 3;
+    grid-row: 1;
 }
 
 .calc_height {
@@ -48,6 +49,7 @@
     font-weight: bold;
     grid-column-start: 2;
     grid-column-end: 3;
+    grid-row: 2;
 }
 
 .calc_weight {
