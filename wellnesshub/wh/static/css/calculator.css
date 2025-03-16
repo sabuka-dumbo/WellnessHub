@@ -560,6 +560,22 @@
     height: max-content;
 }
 
+@media screen and (max-width: 910px) {
+    .main-grid {
+        grid-template-columns: 60px calc(100vw - 120px) 60px;
+    }
+
+    .result2-div {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        margin-top: 0;
+    }
+
+    .other-div {
+        display: none;
+    }
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
