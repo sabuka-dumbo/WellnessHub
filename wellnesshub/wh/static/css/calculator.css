@@ -586,12 +586,7 @@
         grid-template-columns: 17.5px calc(100% - 90px) 5px 50px 17.5px;
         grid-template-rows: none;
         height: max-content;
-    }
-
-    .calc_field3 {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row: 8;
+        padding-bottom: 20px;
     }
 
     .calc_field5 {
@@ -600,8 +595,52 @@
         grid-row: 11;
     }
 
+    .calc_field6 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row: 13;
+    }
+
+    .calc_field5_5 {
+        grid-row: 11;
+        grid-column-start: 4;
+        grid-column-end: 5;
+    }
+
+    .calc_field6_6 {
+        grid-row: 13;
+        grid-column-start: 4;
+        grid-column-end: 5;
+    }
+
+    .MorFradio {
+        grid-row: 15;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    .submit {
+        grid-row: 17;
+        grid-column-start: 2;
+        grid-column-end: 5;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
     .calculator-title {
         margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .main-grid {
+        grid-template-columns: 20px calc(100vw - 40px) 20px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .main-grid {
+        grid-template-columns: 10px calc(100vw - 20px) 10px;
     }
 }
 
