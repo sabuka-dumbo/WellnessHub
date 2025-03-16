@@ -110,23 +110,23 @@
         position: fixed;
         top: 0;
         left: 0;
-        width: 100vw;
+        width: 60vw;
         height: 100vh;
         background-color: #2DAA9E;
         display: block;
     }
 
     .navs-div {
-        left: 20px;
+        left: 40px;
     }
 
     .nav {
         display: block;
-        font-size: 40px;
+        font-size: 30px;
     }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 360px) {
     .navbar {
         padding-left: 20px;
         padding-right: 20px;
