@@ -91,11 +91,13 @@
     }
 
     .burger-span {
+        position: relative;
         top: 0;
         left: 0;
         width: 40px;
         height: 10px;
         margin-bottom: 10px;
         background-color: black;
+        display: inline-block;
     }
 }
