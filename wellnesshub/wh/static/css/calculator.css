@@ -1,0 +1,7 @@
+.main-grid {
+    position: relative;
+    display: grid;
+    top: 100px;
+    left: 40px;
+
+}
