@@ -95,13 +95,6 @@
         display: block;
     }
 
-    .span1 {
-        position: relative;
-        top: 10px;
-        right: 40px;
-        transform: none;
-    }
-
     .burger-span {
         position: relative;
         top: 0;
@@ -112,6 +105,23 @@
         background-color: black;
         display: block;
     }
+
+    /*
+    .span1 {
+        position: relative;
+        top: 13px;
+        right: 40px;
+        transform: none;
+        rotate: 45deg;
+    }
+
+    .span3 {
+        position: relative;
+        top: -13px;
+        right: 40px;
+        transform: none;
+        rotate: -45deg;
+    } */
 
     .navboard {
         position: fixed;
@@ -154,5 +164,73 @@
 }
 
 @keyframes span1_open {
-    
+    0% {}
+
+    100% {
+        top: 13px;
+        rotate: 45deg;
+        transform: none;
+    }
+}
+
+@keyframes span2_open {
+    0% {}
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes span3_open {
+    0% {}
+
+    100% {
+        top: -13px;
+        rotate: -45deg;
+        transform: none;
+    }
+}
+
+@keyframes span1_close {
+    0% {}
+
+    100% {
+        top: 0px;
+        rotate: 0deg;
+        transform: none;
+    }
+}
+
+@keyframes span2_close {
+    0% {}
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes span3_close {
+    0% {}
+
+    100% {
+        top: 0px;
+        rotate: 0deg;
+        transform: none;
+    }
+}
+
+@keyframes navboard_open {
+    0% {}
+
+    100% {
+        left: 0%;
+    }
+}
+
+@keyframes navboard_close {
+    0% {}
+
+    100% {
+        left: -100%;
+    }
 }
