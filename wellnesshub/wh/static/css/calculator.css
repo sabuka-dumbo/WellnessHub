@@ -10,12 +10,55 @@
 
 .calculator-div {
     position: relative;
+    display: grid;
     top: 0;
     left: 0;
     width: 100%;
     height: 300px;
     background-color: white;
     box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.201);
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    grid-template-rows: 0;
+    grid-template-columns: 20px calc((100% - 165px) /2) 5px 100px 20px calc((100% - 165px) /2) 20px;
+}
+
+.calculator-title {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    font-size: 20px;
+    font-family: "Marcellus";
+    font-weight: bold;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.calc_height {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    font-size: 20px;
+    font-family: "Marcellus";
+    font-weight: bold;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.calc_weight {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    font-size: 20px;
+    font-family: "Marcellus";
+    font-weight: bold;
     grid-column-start: 2;
     grid-column-end: 3;
 }
