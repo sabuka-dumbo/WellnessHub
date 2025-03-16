@@ -13,6 +13,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Marcellus&display=swap" rel="stylesheet">
     </head>
     <body class="body">
+        {% block body %}
+        {% endblock %}
+
         <nav class="navbar">
             <div class="navboard" id="navboard">
                 <div class="navs-div" id="navs-div">
@@ -34,9 +37,6 @@
                 <span class="burger-span span3" id="span3"></span>
             </div>
         </nav>
-
-        {% block body %}
-        {% endblock %}
 
         <script src="{% static 'js/layout.js' %}"></script>
     </body>
