@@ -1,3 +1,77 @@
 .body {
     background-color: #FFF5E4;
 }
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100vw - 80px);
+    height: max-content;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #2DAA9E;
+}
+
+.title-div {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: max-content;
+    height: max-content;
+    display: inline-block;
+}
+
+.title {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: max-content;
+    height: max-content;
+    font-family: "Marcellus";
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.title-2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: max-content;
+    height: max-content;
+    font-family: "Marcellus";
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.navs-div {
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    width: max-content;
+    height: max-content;
+}
+
+.nav {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: max-content;
+    height: max-content;
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Marcellus";
+    color: white;
+}
+
+@media screen {
+    
+}
