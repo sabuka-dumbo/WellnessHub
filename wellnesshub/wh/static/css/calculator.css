@@ -34,7 +34,7 @@
     font-family: "Itim";
     font-weight: bold;
     grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column-end: 9;
     display: inline-grid;
     grid-row: 2;
 }
@@ -462,6 +462,7 @@
     margin-top: 20px;
     padding: 20px;
     margin-bottom: 20px;
+    overflow-y: auto;
 }
 
 .results-title {
