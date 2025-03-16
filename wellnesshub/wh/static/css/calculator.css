@@ -55,7 +55,8 @@
     padding: 0;
     margin: 0;
     background-color: white;
-    border-radius: 25px;
+    border-radius: 20px;
+    border: 2.5px solid #D9D9D9;
     
 }
 
@@ -64,7 +65,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: max-content;
+    height: 80%;
     font-size: 20px;
     font-family: "Marcellus";
     font-weight: bold;
@@ -72,6 +73,11 @@
     grid-row: 6;
     grid-column-end: 3;
     display: inline-grid;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    border-radius: 20px;
+    border: 2.5px solid #D9D9D9;
 }
 
 .calc_field3 {
@@ -79,7 +85,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: max-content;
+    height: 80%;
     font-size: 20px;
     font-family: "Marcellus";
     font-weight: bold;
@@ -87,6 +93,11 @@
     grid-row: 8;
     grid-column-end: 3;
     display: inline-grid;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    border-radius: 20px;
+    border: 2.5px solid #D9D9D9;
 }
 
 .calc_field4 {
@@ -94,7 +105,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: max-content;
+    height: 80%;
     font-size: 20px;
     font-family: "Marcellus";
     font-weight: bold;
@@ -102,6 +113,11 @@
     grid-row: 10;
     grid-column-end: 3;
     display: inline-grid;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    border-radius: 20px;
+    border: 2.5px solid #D9D9D9;
 }
 
 .other-div {
