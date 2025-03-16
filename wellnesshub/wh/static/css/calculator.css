@@ -339,6 +339,15 @@
     outline: none;
 }
 
+.female_radio {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: ;
+}
+
 .other-div {
     position: relative;
     top: 0;
