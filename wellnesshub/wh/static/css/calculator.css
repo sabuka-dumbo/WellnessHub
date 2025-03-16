@@ -44,7 +44,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: max-content;
+    height: 80%;
     font-size: 20px;
     font-family: "Marcellus";
     font-weight: bold;
@@ -54,6 +54,9 @@
     display: inline-grid;
     padding: 0;
     margin: 0;
+    background-color: white;
+    border-radius: 25px;
+    
 }
 
 .calc_field2 {
