@@ -6,3 +6,6 @@ def index(request):
 
 def calculator(request):
     return render(request, "calculator.html")
+
+def notes(request):
+    return render(request, "notes.html")
