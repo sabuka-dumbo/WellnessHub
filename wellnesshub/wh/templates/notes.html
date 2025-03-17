@@ -18,10 +18,10 @@
 
 
 {% block body %}
-    <div class="notes-div">
+    <div class="notes-div" id="notes-div">
         <h1 class="notes-title">Notes:</h1>
 
-        <button class="notes-new">New Note</button>
+        <button class="notes-new" onclick="new_note()">New Note</button>
 
         <hr class="notes-line">
 
@@ -31,6 +31,10 @@
             <button class="note-button1">Delete Note</button>
             <button class="note-button2">Read Note</button>
         </div>
+    </div>
+
+    <div class="add-notes-div" id="add-notes-div" style="display: none;">
+        
     </div>
 
     <script src="{% static 'js/notes.js' %}"></script>
