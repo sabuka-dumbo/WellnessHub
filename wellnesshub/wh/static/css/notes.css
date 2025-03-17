@@ -263,6 +263,12 @@
 
 @media screen and (max-width: 900px) {
     .note {
-        grid-template-columns: 40% 10px calc(40% - 220px) 100px 10px 100px;
+        grid-template-columns: 40% 10px calc(60% - 220px) 100px 10px 100px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .note {
+        grid-template-columns: calc(100% - 210px) 10px 200px;
     }
 }
