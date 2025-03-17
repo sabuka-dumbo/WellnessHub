@@ -147,6 +147,57 @@
     margin-top: 140px;
 }
 
+
+.notes-title2 {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: max-content;
+    height: max-content;
+    font-family: "Itim";
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+.notes-save {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    background-color: #78F583;
+    color: white;
+    font-family: "Itim";
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.notes-cancel {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    background-color: #78F583;
+    color: white;
+    font-family: "Itim";
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.add-notes-buttons {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
 @keyframes fade_out {
     0% {
         opacity: 100%;
