@@ -1,12 +1,18 @@
 const notes_div = document.getElementById("notes-div");
 const add_notes_div = document.getElementById("add-notes-div");
 
+const note_text = document.getElementById("note_text");
+const notes_title2 = document.getElementById("notes-title2");
+
 function new_note() {
     notes_div.style.display = "block";
     add_notes_div.style.display = "block";
     notes_div.style.animation = "fade_out 0.5s ease";
 
     const handleNotesFadeOut = function () {
+        notes_title2.value = '';
+        note_text.value = '';
+
         notes_div.style.animation = "";
         notes_div.style.display = "none";
 
@@ -29,6 +35,9 @@ function close_note() {
     add_notes_div.style.animation = "fade_out 0.5s ease";
 
     const handleAddNotesFadeOut = function () {
+        notes_title2.value = '';
+        note_text.value = '';
+
         add_notes_div.style.animation = "";
         add_notes_div.style.display = "none";
 
@@ -48,23 +57,30 @@ function close_note() {
 }
 
 function save_note() {
-    add_notes_div.style.animation = "fade_out 0.5s ease";
+    if (notes_title2.trim().length > 0 || note_text.trim().length > 0) {
+        add_notes_div.style.animation = "fade_out 0.5s ease";
 
-    const handleAddNotesFadeOut = function () {
-        add_notes_div.style.animation = "";
-        add_notes_div.style.display = "none";
-
-        notes_div.style.display = "block";
-        notes_div.style.animation = "fade_in 0.5s ease";
-
-        const handleNotesFadeIn = function () {
-            notes_div.style.animation = "";
-            notes_div.removeEventListener("animationend", handleNotesFadeIn);
+        const handleAddNotesFadeOut = function () {
+            notes_title2.value = '';
+            note_text.value = '';
+    
+            add_notes_div.style.animation = "";
+            add_notes_div.style.display = "none";
+    
+            notes_div.style.display = "block";
+            notes_div.style.animation = "fade_in 0.5s ease";
+    
+            const handleNotesFadeIn = function () {
+                notes_div.style.animation = "";
+                notes_div.removeEventListener("animationend", handleNotesFadeIn);
+            };
+    
+            notes_div.addEventListener("animationend", handleNotesFadeIn);
+            add_notes_div.removeEventListener("animationend", handleAddNotesFadeOut);
         };
-
-        notes_div.addEventListener("animationend", handleNotesFadeIn);
-        add_notes_div.removeEventListener("animationend", handleAddNotesFadeOut);
-    };
-
-    add_notes_div.addEventListener("animationend", handleAddNotesFadeOut);
+    
+        add_notes_div.addEventListener("animationend", handleAddNotesFadeOut);
+    } else {
+        // GIVE ALARM TO PERSON, THAT ALL OF THE FIELDS MUST BE FILLED!
+    }
 }
