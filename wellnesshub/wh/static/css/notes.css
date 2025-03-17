@@ -162,7 +162,7 @@
 }
 
 .notes-save {
-    position: absolute;
+    position: relative;
     top: 20px;
     right: 20px;
     width: 100px;
@@ -174,10 +174,11 @@
     font-family: "Itim";
     font-size: 18px;
     font-weight: bold;
+    display: inline;
 }
 
 .notes-cancel {
-    position: absolute;
+    position: relative;
     top: 20px;
     right: 20px;
     width: 100px;
@@ -189,7 +190,7 @@
     font-family: "Itim";
     font-size: 18px;
     font-weight: bold;
-    display: inline-block;
+    display: inline;
 }
 
 .add-notes-buttons {
