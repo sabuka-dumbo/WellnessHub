@@ -162,8 +162,9 @@
 }
 
 .notes-save {
-    top: 0px;
-    right: 20px;
+    position: relative;
+    top: 2px;
+    right: 0;
     width: 100px;
     height: 35px;
     border: none;
@@ -177,16 +178,16 @@
 }
 
 .notes-cancel {
-    top: -16px;
+    top: 0;
     right: 20px;
     width: 100px;
     height: 35px;
     border: none;
     border-radius: 10px;
-    background-color: #78F583;
-    color: white;
+    background-color: #D9D9D9;
+    color: black;
     font-family: "Itim";
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
     display: inline;
 }
@@ -194,7 +195,31 @@
 .add-notes-buttons {
     position: absolute;
     right: 20px;
-    top: 10px;
+    top: 20px;
+}
+
+.notes-textarea {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: calc(100% - 20px);
+    height: 280px;
+    resize: none;
+    border: none;
+    background-color: #D9D9D9;
+    color: black;
+    outline: none;
+    padding: 10px;
+}
+
+.notes-icon1 {
+    position: relative;
+    top: 3px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 0;
 }
 
 @keyframes fade_out {
