@@ -269,6 +269,47 @@
 
 @media screen and (max-width: 760px) {
     .note {
-        grid-template-columns: calc(100% - 210px) 10px 200px;
+        grid-template-columns: 50% 20px calc(50% - 20px);
+    }
+
+    .note-button1 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row: 2;
+    }
+
+    .note-button2 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row: 2;
+    }
+}
+
+@media screen and (max-width: 465px) {
+    .note {
+        grid-template-columns: 50% 20px calc(50% - 20px);
+    }
+
+    .note-button1 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row: 2;
+        height: 120%;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .note-button2 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row: 2;
+        height: 120%;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .notes-div {
+        left: 20px;
+        width: calc(100% - 60px);
     }
 }
