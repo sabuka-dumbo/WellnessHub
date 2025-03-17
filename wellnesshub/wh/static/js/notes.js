@@ -13,5 +13,10 @@ function new_note() {
 
         add_notes_div.style.display = "block"
         add_notes_div.style.animation = "fade_in 0.5s ease";
+
+        add_notes_div.addEventListener("animationend", function() {
+            add_notes_div.style.animation = '';
+            add_notes_div.style.display = "block";
+        })
     })
 }

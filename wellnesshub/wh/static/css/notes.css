@@ -135,6 +135,18 @@
     border: none;
 }
 
+.add-notes-div {
+    position: relative;
+    top: 0;
+    left: 60px;
+    width: calc(100% - 160px);
+    height: 400px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.201);
+    margin-top: 140px;
+}
+
 @keyframes fade_out {
     0% {
         opacity: 100%;
