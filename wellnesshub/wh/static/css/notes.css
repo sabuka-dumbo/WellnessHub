@@ -283,6 +283,14 @@
         grid-column-end: 4;
         grid-row: 2;
     }
+
+    .note-date {
+        top: -3px;
+    }
+
+    .note-title {
+        top: -3px;
+    }
 }
 
 @media screen and (max-width: 465px) {
@@ -340,14 +348,6 @@
     
     .notes-line {
         width: 99%;
-    }
-
-    .note-date {
-        top: -3px;
-    }
-
-    .note-title {
-        top: -3px;
     }
 }
 
