@@ -9,3 +9,6 @@ def calculator(request):
 
 def notes(request):
     return render(request, "notes.html")
+
+def workouts(request):
+    return render(request, "workouts.html")
