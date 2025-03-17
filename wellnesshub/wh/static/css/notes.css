@@ -354,3 +354,19 @@
         right: 0;
     }
 }
+
+@media screen and (max-width: 350px) {
+    .markdown-tip {
+        left: 22px;
+        right: 0;
+        font-size: 11px;
+    }
+
+    .notes-cancel {
+        font-size: 12px;
+    }
+
+    .notes-save {
+        font-size: 12px;
+    }
+}
