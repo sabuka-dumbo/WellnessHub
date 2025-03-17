@@ -22,7 +22,6 @@ function new_note() {
 }
 
 function close_note() {
-    notes_div.style.display = "block";
     add_notes_div.style.display = "block";
 
     add_notes_div.style.animation = "fade_out 0.5s ease";
