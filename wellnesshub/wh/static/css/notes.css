@@ -49,12 +49,66 @@
     margin-bottom: 20px;
 }
 
-.notes-saved {
+.note {
     position: relative;
     display: grid;
     top: 0;
     left: 0;
     width: 100%;
     height: max-content;
-    grid-template-columns: 50% calc(50% - ) 100px 10px 100px;
+    grid-template-columns: 50% 10px calc(50% - 220px) 100px 10px 100px;
+}
+
+.note-title {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    font-family: "Itim";
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    padding: 0;
+    margin: 0;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.note-date {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    font-family: "Itim";
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(63, 63, 63);
+    padding: 0;
+    margin: 0;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.note-button1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: calc(100% - 40px);
+    height: calc(100% - 20px);
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #FF7676;
+    color: white;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    font-family: "Itim";
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
 }
