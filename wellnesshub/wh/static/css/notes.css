@@ -310,6 +310,6 @@
 
     .notes-div {
         left: 20px;
-        width: calc(100% - 60px);
+        width: calc(100% - 80px);
     }
 }
