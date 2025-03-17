@@ -147,7 +147,6 @@
     margin-top: 140px;
 }
 
-
 .notes-title2 {
     position: relative;
     top: 0px;
@@ -327,7 +326,7 @@
 
     .notes-cancel {
         width: calc(50% - 10px);
-        margin-right: 19px;
+        margin-right: 15px;
     }
 
     .notes-save {
@@ -335,6 +334,23 @@
     }
 
     .notes-title2 {
-        width: 100%;
+        width: 98%;
+    }
+    
+    .notes-line {
+        width: 99%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .add-notes-div {
+        width: calc(100% - 80px);
+        left: 20px;
+        height: 470px;
+    }
+
+    .markdown-tip {
+        left: 22px;
+        right: 0;
     }
 }
