@@ -162,8 +162,7 @@
 }
 
 .notes-save {
-    position: relative;
-    top: 20px;
+    top: 0px;
     right: 20px;
     width: 100px;
     height: 35px;
@@ -178,8 +177,7 @@
 }
 
 .notes-cancel {
-    position: relative;
-    top: 20px;
+    top: -16px;
     right: 20px;
     width: 100px;
     height: 35px;
