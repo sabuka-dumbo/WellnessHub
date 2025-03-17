@@ -260,3 +260,9 @@
         opacity: 100%;
     }
 }
+
+@media screen and (max-width: 900px) {
+    .note {
+        grid-template-columns: 50% 10px calc(50% - 220px) 100px 10px 100px;
+    }
+}
