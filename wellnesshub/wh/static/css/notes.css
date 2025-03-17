@@ -315,5 +315,26 @@
 }
 
 @media screen and (max-width: 720px) {
-    
+    .add-notes-div {
+        height: 440px;
+    }
+
+    .add-notes-buttons {
+        position: relative;
+        left: 0;
+        top: 10px;
+    }
+
+    .notes-cancel {
+        width: calc(50% - 10px);
+        margin-right: 19px;
+    }
+
+    .notes-save {
+        width: calc(50% - 10px);
+    }
+
+    .notes-title2 {
+        width: 100%;
+    }
 }
