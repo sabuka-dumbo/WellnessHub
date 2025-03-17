@@ -49,3 +49,12 @@
     margin-bottom: 20px;
 }
 
+.notes-saved {
+    position: relative;
+    display: grid;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    grid-template-columns: 50% calc(50% - ) 100px 10px 100px;
+}
