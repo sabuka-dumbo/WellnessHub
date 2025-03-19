@@ -1,0 +1,11 @@
+.workout-div {
+    position: relative;
+    top: 140px;
+    left: 60px;
+    width: calc(100% - 120px);
+    height: max-content;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.201);
+    display: grid;
+    grid-template-columns: calc(40% - 10px) 20px calc(60% - 10px);
+}
+
