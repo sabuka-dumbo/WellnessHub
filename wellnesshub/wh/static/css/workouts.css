@@ -4,8 +4,59 @@
     left: 60px;
     width: calc(100% - 120px);
     height: max-content;
-    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.201);
     display: grid;
-    grid-template-columns: calc(40% - 10px) 20px calc(60% - 10px);
+    grid-template-columns: calc(65% - 10px) 20px calc(35% - 10px);
 }
 
+.muscle-select {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.201);
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row: 1;
+}
+
+.settings-select {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.201);
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row: 1;
+}
+
+.ss-tilte {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    padding: 0;
+    margin: 0;
+    font-family: "Itim";
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.ss-div {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    display: grid;
+    grid-template-columns: calc(80% - 10px) 20px calc(20% - 10px);
+    padding: 0;
+    margin: 0;
+}
