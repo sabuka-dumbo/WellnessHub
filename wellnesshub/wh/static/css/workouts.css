@@ -176,8 +176,29 @@
     left: 0;
     width: 140%;
     height: max-content;
-    background-color: aqua;
     grid-row: 4;
+    margin-top: 5px;
+}
+
+.female_radio {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: #777777 solid 2px;
+}
+
+.female_radio_text {
+    position: relative;
+    top: -5px;
+    left: 0;
+    width: max-content;
+    height: max-content;
+    font-family: "Itim";
+    font-size: 15px;
+    font-weight: bold;
 }
 
 input::-webkit-outer-spin-button,
