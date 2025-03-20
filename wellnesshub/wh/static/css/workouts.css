@@ -355,6 +355,24 @@
     }
 }
 
+@media screen and (max-width: 320px) {
+    .female_radio_text {
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width: 293px) {
+    .female_radio_text {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 279px) {
+    .female_radio_text {
+        margin-right: 6px;
+    }
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
