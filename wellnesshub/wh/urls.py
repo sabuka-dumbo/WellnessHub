@@ -7,4 +7,7 @@ urlpatterns = [
     path('calculator/', views.calculator, name="calculator"),
     path('notes/', views.notes, name="notes"),
     path('workouts/', views.workouts, name="workout"),
+
+
+    path('/add_note/', views.add_note, name="add_note"),
 ]

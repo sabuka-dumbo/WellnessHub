@@ -12,3 +12,6 @@ def notes(request):
 
 def workouts(request):
     return render(request, "workouts.html")
+
+def add_note(request):
+    return render(request, "workouts.html")
