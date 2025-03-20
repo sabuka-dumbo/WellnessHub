@@ -6,11 +6,12 @@ const edit_notes_div = document.getElementById("edit-notes-div");
 const note_text = document.getElementById("note_text");
 const notes_title2 = document.getElementById("notes-title2");
 
-const edit_note_text = document.getElementById("note_text");
-const edit_notes_title2 = document.getElementById("notes-title2");
+const edit_note_text = document.getElementById("edit_note_text");
+const edit_notes_title2 = document.getElementById("edit-notes-title2");
 
 let current_title = '';
 let current_text = '';
+let current_pk = 0;
 
 function new_note() {
     notes_div.style.display = "block";
@@ -171,6 +172,7 @@ function read_note(pk) {
 
         current_text = text;
         current_title = title;
+        current_pk = pk;
 
         notes_div.style.animation = "fade_out 0.5s ease";
 
@@ -249,4 +251,56 @@ function edit_note() {
     };
 
     read_notes_div.addEventListener("animationend", handleReadNotesFadeOut, { once: true });
+}
+
+function save_edit_note() {
+    if (notes_title2.value && note_text.value) {
+        // FIRST SEND THEM TO BACK
+
+        fetch("/save_edit_note/", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ 
+                "note_pk": current_pk,
+                "note_title": current_title,
+                "note_text": current_text,
+            }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            let saved = data.saved;
+            let note_id = data.note_id;
+            let note_date = new Date(data.note_date);
+
+            edit_notes_div.style.animation = "fade_out 0.5s ease";
+
+            const handleAddNotesFadeOut = function () {
+                notes_title2.value = '';
+                note_text.value = '';
+        
+                edit_notes_div.style.animation = "";
+                edit_notes_div.style.display = "none";
+        
+                notes_div.style.display = "block";
+                notes_div.style.animation = "fade_in 0.5s ease";
+        
+                const handleNotesFadeIn = function () {
+                    notes_div.style.animation = "";
+                    notes_div.removeEventListener("animationend", handleNotesFadeIn);
+                };
+        
+                notes_div.addEventListener("animationend", handleNotesFadeIn);
+                edit_notes_div.removeEventListener("animationend", handleAddNotesFadeOut);
+            };
+        
+            edit_notes_div.addEventListener("animationend", handleAddNotesFadeOut);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    } else {
+        // GIVE ALARM TO PERSON, THAT ALL OF THE FIELDS MUST BE FILLED!
+    }
 }

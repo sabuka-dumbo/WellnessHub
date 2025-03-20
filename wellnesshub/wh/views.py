@@ -81,16 +81,21 @@ def read_note(request):
     return JsonResponse({ "done": True })
 
 @csrf_exempt
-def edit_note(request):
+def save_edit_note(request):
     if request.method == "POST":
         try:
             data_from_js = json.loads(request.body.decode('utf-8'))
 
             note_pk = data_from_js.get("note_pk")
+            note_title = data_from_js.get("note_title")
+            note_text = data_from_js.get("note_text")
 
             note = Note.objects.all().get(pk=note_pk)
 
-            
+            note.title = note_title
+            note.text = note_text
+
+            note.save()
 
             return JsonResponse({"edit": "Edited"})            
 
