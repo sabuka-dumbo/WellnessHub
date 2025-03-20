@@ -23,10 +23,16 @@ if (calculation == "Body Fat") {
     calc_field1.style.display = "block";
     calc_field2.style.display = "block";
     calc_field3.style.display = "block";
+    calc_field4.style.display = "block";
+    calc_field5.style.display = "block";
+    calc_field6.style.display = "none";
 
     calc_field1_1.style.display = "block";
     calc_field2_2.style.display = "block";
     calc_field3_3.style.display = "block";
+    calc_field4_4.style.display = "block";
+    calc_field5_5.style.display = "block";
+    calc_field6_6.style.display = "none";
 
     calc_field1.placeholder = "Enter Height";
     calc_field2.placeholder = "Enter Weight";
