@@ -217,26 +217,28 @@ function close_note() {
 }
 
 function edit_note() {
-    fetch("/edit_note/", {
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ 
-            "note_pk": pk,
-        }),
-    })
-    .then(response => response.json())
-    .then(data => {
-        let deleted = data.delete;
+    edit_note.style.display = "block";
+    add_notes_div.style.display = "block";
+    notes_div.style.animation = "fade_out 0.5s ease";
 
-        let noteDiv = notes_div.querySelector(`#note${pk}`);
+    const handleNotesFadeOut = function () {
+        notes_title2.value = '';
+        note_text.value = '';
 
-        if (noteDiv) {
-            noteDiv.remove();
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
+        notes_div.style.animation = "";
+        notes_div.style.display = "none";
+
+        add_notes_div.style.display = "block";
+        add_notes_div.style.animation = "fade_in 0.5s ease";
+
+        const handleAddNotesFadeIn = function () {
+            add_notes_div.style.animation = "";
+            add_notes_div.removeEventListener("animationend", handleAddNotesFadeIn);
+        };
+
+        add_notes_div.addEventListener("animationend", handleAddNotesFadeIn);
+        notes_div.removeEventListener("animationend", handleNotesFadeOut);
+    };
+
+    notes_div.addEventListener("animationend", handleNotesFadeOut);
 }
