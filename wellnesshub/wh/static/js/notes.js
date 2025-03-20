@@ -165,11 +165,13 @@ function read_note(pk) {
 
         notes_div.addEventListener("animationend", function() {
             notes_div.style.animation = '';
+            notes_div.style.opacity = "0%";
             add_notes_div.style.animation = "face_in 0.5s ease";
-            notes_div.style.opacity = "0";
+            add_notes_div.style.display = "block";
 
             add_notes_div.addEventListener("animationend", function() {
-                
+                add_notes_div.style.animation = '';
+                add_notes_div.style.opacity = "100%";
             })
         })
     })
