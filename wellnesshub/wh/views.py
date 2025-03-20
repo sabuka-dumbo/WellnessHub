@@ -29,7 +29,9 @@ def save_note(request):
             note_title = data_from_js.get("note_title")
             note_text = data_from_js.get("note_text")
 
-            new_note = Note(request,)
+            new_note = Note.objects.create(user=request.user, title=note_title, note_text=note_text)
+
+            return JsonResponse({"saved": "Saved"})            
 
         except json.JSONDecodeError as e:
             return JsonResponse({"error": str(e)}, status=400)

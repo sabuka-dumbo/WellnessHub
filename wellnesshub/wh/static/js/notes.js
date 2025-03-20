@@ -72,7 +72,8 @@ function save_note() {
         })
         .then(response => response.json())
         .then(data => {
-            let done = data.done;
+            let saved = data.saved;
+            console.log(saved)
 
             add_notes_div.style.animation = "fade_out 0.5s ease";
 
