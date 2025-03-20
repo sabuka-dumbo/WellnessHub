@@ -167,7 +167,7 @@ function read_note(pk) {
         notes_div.addEventListener("animationend", function() {
             notes_div.style.animation = '';
             notes_div.style.display = "none";
-            read_notes_div.style.animation = "face_in 0.5s ease";
+            read_notes_div.style.animation = "fade_in 0.5s ease";
             read_notes_div.style.display = "block";
 
             document.getElementById("read-notes-title2").value = title;
@@ -175,8 +175,8 @@ function read_note(pk) {
 
             read_notes_div.addEventListener("animationend", function() {
                 read_notes_div.style.animation = '';
-            })
-        })
+            }, { once: true });
+        }, { once: true });
     })
     .catch(error => {
         console.error('Error:', error);
@@ -184,7 +184,7 @@ function read_note(pk) {
 }
 
 function close_note() {
-    if (read_notes_div.style.display == "block") {
+    if (read_notes_div.style.display === "block") {
         read_notes_div.style.animation = "fade_out 0.5s ease";
 
         read_notes_div.addEventListener("animationend", function() {
@@ -196,10 +196,10 @@ function close_note() {
 
             notes_div.addEventListener("animationend", function() {
                 notes_div.style.animation = '';
-                notes_div.style.display = "block";
-            })
-        })
-    } else if (add_notes_div.style.display == "block") {
+            }, { once: true });
+        }, { once: true });
+
+    } else if (add_notes_div.style.display === "block") {
         add_notes_div.style.animation = "fade_out 0.5s ease";
 
         add_notes_div.addEventListener("animationend", function() {
@@ -211,8 +211,11 @@ function close_note() {
 
             notes_div.addEventListener("animationend", function() {
                 notes_div.style.animation = '';
-                notes_div.style.display = "block";
-            })
-        })
+            }, { once: true });
+        }, { once: true });
     }
+}
+
+function edit_note() {
+    
 }
