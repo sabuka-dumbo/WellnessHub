@@ -90,6 +90,8 @@ def edit_note(request):
 
             note = Note.objects.all().get(pk=note_pk)
 
+            
+
             return JsonResponse({"edit": "Edited"})            
 
         except json.JSONDecodeError as e:
