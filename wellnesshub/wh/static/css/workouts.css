@@ -343,6 +343,21 @@
     }
 }
 
+@media screen and (max-width: 600px) {
+    .result {
+        grid-template-columns: 100%;
+    }
+
+    .result-video {
+        margin-bottom: 10px;
+    }
+
+    .result-text {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+}
+
 @media screen and (max-width: 480px) {
     .workout-div {
         left: 30px;
@@ -357,7 +372,7 @@
 
 @media screen and (max-width: 321px) {
     .female_radio_text {
-        margin-right: 35px;
+        margin-right: 37px;
     }
 
     .ss-input {
