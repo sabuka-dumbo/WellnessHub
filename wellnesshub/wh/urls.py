@@ -9,5 +9,5 @@ urlpatterns = [
     path('workouts/', views.workouts, name="workout"),
 
 
-    path('/add_note/', views.add_note, name="add_note"),
+    path('/add_note/', views.save_note, name="add_note"),
 ]
