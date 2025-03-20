@@ -73,33 +73,33 @@ function save_note() {
         .then(response => response.json())
         .then(data => {
             let done = data.done;
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-        
-        add_notes_div.style.animation = "fade_out 0.5s ease";
 
-        const handleAddNotesFadeOut = function () {
-            notes_title2.value = '';
-            note_text.value = '';
-    
-            add_notes_div.style.animation = "";
-            add_notes_div.style.display = "none";
-    
-            notes_div.style.display = "block";
-            notes_div.style.animation = "fade_in 0.5s ease";
-    
-            const handleNotesFadeIn = function () {
-                notes_div.style.animation = "";
-                notes_div.removeEventListener("animationend", handleNotesFadeIn);
+            add_notes_div.style.animation = "fade_out 0.5s ease";
+
+            const handleAddNotesFadeOut = function () {
+                notes_title2.value = '';
+                note_text.value = '';
+        
+                add_notes_div.style.animation = "";
+                add_notes_div.style.display = "none";
+        
+                notes_div.style.display = "block";
+                notes_div.style.animation = "fade_in 0.5s ease";
+        
+                const handleNotesFadeIn = function () {
+                    notes_div.style.animation = "";
+                    notes_div.removeEventListener("animationend", handleNotesFadeIn);
+                };
+        
+                notes_div.addEventListener("animationend", handleNotesFadeIn);
+                add_notes_div.removeEventListener("animationend", handleAddNotesFadeOut);
             };
-    
-            notes_div.addEventListener("animationend", handleNotesFadeIn);
-            add_notes_div.removeEventListener("animationend", handleAddNotesFadeOut);
-        };
-    
-        add_notes_div.addEventListener("animationend", handleAddNotesFadeOut);
+        
+            add_notes_div.addEventListener("animationend", handleAddNotesFadeOut);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
     } else {
         // GIVE ALARM TO PERSON, THAT ALL OF THE FIELDS MUST BE FILLED!
     }
