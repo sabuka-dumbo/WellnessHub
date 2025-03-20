@@ -25,7 +25,7 @@
 
         <hr class="notes-line">
 
-        {% if notes != '' %}
+        {% if notes %}
             {% for i in notes|dictsortreversed:"id" %}
                 <div class="note" id='note{{ i.pk }}'>
                     <h1 class="note-title">{{ i.title }}</h1>
@@ -35,6 +35,9 @@
                 </div>
             {% endfor %}
         {% else %}
+            <div class="no-note-div">
+                <h1 class="nnd-text">No notes added yet!</h1>
+            </div>
         {% endif %}
     </div>
 
