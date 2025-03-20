@@ -264,14 +264,14 @@ function save_edit_note() {
             },
             body: JSON.stringify({ 
                 "note_pk": current_pk,
-                "note_title": current_title,
-                "note_text": current_text,
+                "note_title": edit_notes_title2.value,
+                "note_text": edit_note_text.value,
             }),
         })
         .then(response => response.json())
         .then(data => {
             let edit = data.edit;
-            console.log(edit)
+
 
             edit_notes_div.style.animation = "fade_out 0.5s ease";
 
