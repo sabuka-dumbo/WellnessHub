@@ -254,7 +254,7 @@ function edit_note() {
 }
 
 function save_edit_note() {
-    if (notes_title2.value && note_text.value) {
+    if (edit_notes_title2.value && edit_note_text.value) {
         // FIRST SEND THEM TO BACK
 
         fetch("/save_edit_note/", {
@@ -270,9 +270,8 @@ function save_edit_note() {
         })
         .then(response => response.json())
         .then(data => {
-            let saved = data.saved;
-            let note_id = data.note_id;
-            let note_date = new Date(data.note_date);
+            let edit = data.edit;
+            console.log(edit)
 
             edit_notes_div.style.animation = "fade_out 0.5s ease";
 
