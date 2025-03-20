@@ -272,6 +272,13 @@ function save_edit_note() {
         .then(data => {
             let edit = data.edit;
 
+            let noteDiv = document.getElementById("note" + current_pk);
+            if (noteDiv) {
+                let titleElement = noteDiv.querySelector(".note-title");
+                if (titleElement) {
+                    titleElement.innerText = edit_notes_title2.value;
+                }
+            }
 
             edit_notes_div.style.animation = "fade_out 0.5s ease";
 
