@@ -41,7 +41,7 @@ if (calculation == "Body Fat") {
     calc_field5.placeholder = "Enter Waist Circumference";
 
     submit.addEventListener("click", function() {
-        if (MorF1 == true) {
+        if (MorF1.checked) {
             bodyfat = calculateBodyFatWomen(calc_field5.value, calc_field3.value, calc_field1.value, calc_field4.value)
         } else {
             bodyfat = calculateBodyFatMen(calc_field5.value, calc_field3.value, calc_field1.value)
