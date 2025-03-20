@@ -128,12 +128,12 @@ function delete_note(pk) {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({ 
-            "note_title": notes_title2.value,
+            "note_pk": pk,
         }),
     })
     .then(response => response.json())
     .then(data => {
-        let saved = data.saved;
+        let deleted = data.delete;
     })
     .catch(error => {
         console.error('Error:', error);

@@ -30,7 +30,7 @@
                 <div class="note" id='note{{ i.pk }}'>
                     <h1 class="note-title">{{ i.title }}</h1>
                     <h1 class="note-date">{{ i.date }}</h1>
-                    <button class="note-button1" onclick="delete_note(`{{ i.pk }}`)">Delete Note</button>
+                    <button class="note-button1" onclick="delete_note(`{{ i.pk }}`)" style="cursor: pointer;">Delete Note</button>
                     <button class="note-button2" onclick="">Read Note</button>
                 </div>
             {% endfor %}

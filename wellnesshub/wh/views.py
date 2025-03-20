@@ -50,8 +50,11 @@ def delete_note(request):
         try:
             data_from_js = json.loads(request.body.decode('utf-8'))
 
-            note_text = data_from_js.get("note_text")
+            note_pk = data_from_js.get("note_pk")
 
+            note = Note.objects.all().filter(pk=note_pk)
+
+            note.delete()
 
             return JsonResponse({"delete": "Deleted"})            
 
