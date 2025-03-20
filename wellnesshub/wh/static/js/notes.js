@@ -227,27 +227,26 @@ function close_note() {
 }
 
 function edit_note() {
-    read_notes_div.style.display = "block";
-    edit_notes_div.style.display = "block";
-    read_notes_div.style.animation = "fade_out 0.5s ease";
     edit_notes_title2.value = current_title;
     edit_note_text.value = current_text;
 
-    const handleNotesFadeOut = function () {
+    read_notes_div.style.animation = "fade_out 0.5s ease";
+
+    const handleReadNotesFadeOut = function () {
         read_notes_div.style.animation = "";
         read_notes_div.style.display = "none";
+        read_notes_div.removeEventListener("animationend", handleReadNotesFadeOut);
 
         edit_notes_div.style.display = "block";
         edit_notes_div.style.animation = "fade_in 0.5s ease";
 
-        const handleAddNotesFadeIn = function () {
+        const handleEditNotesFadeIn = function () {
             edit_notes_div.style.animation = "";
-            edit_notes_div.removeEventListener("animationend", handleAddNotesFadeIn);
+            edit_notes_div.removeEventListener("animationend", handleEditNotesFadeIn);
         };
 
-        edit_notes_div.addEventListener("animationend", handleAddNotesFadeIn);
-        read_notes_div.removeEventListener("animationend", handleNotesFadeOut);
+        edit_notes_div.addEventListener("animationend", handleEditNotesFadeIn, { once: true });
     };
 
-    notes_div.addEventListener("animationend", handleNotesFadeOut);
+    read_notes_div.addEventListener("animationend", handleReadNotesFadeOut, { once: true });
 }
