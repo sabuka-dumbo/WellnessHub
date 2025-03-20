@@ -74,13 +74,17 @@ function save_note() {
         .then(data => {
             let saved = data.saved;
             let note_id = data.note_id;
-            let note_date = data.note_date;
-            console.log(saved)
+            let note_date = new Date(data.note_date);
+            let formattedDate = note_date.toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric"
+            });
 
             notes_div.innerHTML += `
                 <div class="note" id='note${note_id}'>
                     <h1 class="note-title">${notes_title2.value}</h1>
-                    <h1 class="note-date">todays month day and year like March 3, 2025</h1>
+                    <h1 class="note-date">${formattedDate}</h1>
                     <button class="note-button1">Delete Note</button>
                     <button class="note-button2">Read Note</button>
                 </div>
