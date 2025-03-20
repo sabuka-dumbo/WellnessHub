@@ -1,10 +1,9 @@
 const notes_div = document.getElementById("notes-div");
 const add_notes_div = document.getElementById("add-notes-div");
+const read_notes_div = document.getElementById("read-notes-div");
 
 const note_text = document.getElementById("note_text");
 const notes_title2 = document.getElementById("notes-title2");
-
-const read_notes_div = document.getElementById("read-notes-div");
 
 function new_note() {
     notes_div.style.display = "block";
@@ -171,16 +170,28 @@ function read_note(pk) {
             read_notes_div.style.animation = "face_in 0.5s ease";
             read_notes_div.style.display = "block";
 
+            document.getElementById("read-notes-title2").value = title;
+            document.getElementById("read_note_text").value = text;
+
             read_notes_div.addEventListener("animationend", function() {
                 read_notes_div.style.animation = '';
-                read_notes_div.style.display = "block";
-
-                document.getElementById("read-notes-title2").value = title;
-                document.getElementById("read_note_text").value = text;
             })
         })
     })
     .catch(error => {
         console.error('Error:', error);
     });
+}
+
+function close_note() {
+    if (read_notes_div.style.display == "block") {
+        read_notes_div.style.animation = "fade_out 0.5s ease";
+
+        read_notes_div.addEventListener("animationend", function() {
+            read_notes_div.style.animation = '';
+            read_notes_div.style.display = "none";
+        })
+    } else if (add_notes_div.style.display == "block") {
+
+    }
 }
