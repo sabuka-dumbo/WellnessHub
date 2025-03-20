@@ -4,6 +4,8 @@ const add_notes_div = document.getElementById("add-notes-div");
 const note_text = document.getElementById("note_text");
 const notes_title2 = document.getElementById("notes-title2");
 
+const read_notes_div = document.getElementById("read-notes-div");
+
 function new_note() {
     notes_div.style.display = "block";
     add_notes_div.style.display = "block";
@@ -165,13 +167,13 @@ function read_note(pk) {
 
         notes_div.addEventListener("animationend", function() {
             notes_div.style.animation = '';
-            notes_div.style.opacity = "0%";
-            add_notes_div.style.animation = "face_in 0.5s ease";
-            add_notes_div.style.display = "block";
+            notes_div.style.display = "none";
+            read_notes_div.style.animation = "face_in 0.5s ease";
+            read_notes_div.style.display = "block";
 
-            add_notes_div.addEventListener("animationend", function() {
-                add_notes_div.style.animation = '';
-                add_notes_div.style.opacity = "100%";
+            read_notes_div.addEventListener("animationend", function() {
+                read_notes_div.style.animation = '';
+                read_notes_div.style.display = "block";
             })
         })
     })

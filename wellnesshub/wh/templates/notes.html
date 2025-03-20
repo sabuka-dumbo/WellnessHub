@@ -61,5 +61,19 @@
         <h1 class="markdown-tip">Tip: You can use markdown language.</h1>
     </div>
 
+    <div class="add-notes-div" id="read-notes-div" style="display: none;">
+        <input class="notes-title2" type="text" id="notes-title2" placeholder="Enter note title here..." readonly>
+
+        <div class="add-notes-buttons">
+            <button class="notes-cancel" onclick="close_note()">Cancel Note</button>
+
+            <button class="notes-save" onclick="edit_note()">Edit Note</button>
+        </div>
+
+        <hr class="notes-line">
+
+        <textarea class="notes-textarea" name="note_text" id="note_text" placeholder="Enter note here..." readonly></textarea>
+    </div>
+
     <script src="{% static 'js/notes.js' %}"></script>
 {% endblock %}
