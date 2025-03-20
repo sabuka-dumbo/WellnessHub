@@ -54,10 +54,12 @@ if (calculation == "Body Fat") {
 
 function calculateBodyFatMen(waist, neck, height) {
     const log10 = Math.log10;
-    return 86.010 * log10(waist - neck) - 70.041 * log10(height) + 36.76;
+    const denominator = 1.0324 - 0.19077 * log10(waist - neck) + 0.15456 * log10(height);
+    return (495 / denominator) - 450;
 }
 
 function calculateBodyFatWomen(waist, neck, height, hip) {
     const log10 = Math.log10;
-    return 163.205 * log10(waist + hip - neck) - 97.684 * log10(height) - 78.387;
+    const denominator = 1.29579 - 0.35004 * log10(waist + hip - neck) + 0.22100 * log10(height);
+    return (495 / denominator) - 450;
 }
