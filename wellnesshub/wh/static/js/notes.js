@@ -5,6 +5,8 @@ const note_text = document.getElementById("note_text");
 const notes_title2 = document.getElementById("notes-title2");
 
 const read_notes_div = document.getElementById("read-notes-div");
+const read_notes_title2 = document.getElementById("read-notes-title2");
+const read_notes_text = document.getElementById("read_note_text");
 
 function new_note() {
     notes_div.style.display = "block";
@@ -174,6 +176,9 @@ function read_note(pk) {
             read_notes_div.addEventListener("animationend", function() {
                 read_notes_div.style.animation = '';
                 read_notes_div.style.display = "block";
+
+                read_notes_title2.value = title;
+                read_notes_text.value = text;
             })
         })
     })
