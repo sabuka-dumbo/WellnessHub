@@ -5,6 +5,9 @@ const read_notes_div = document.getElementById("read-notes-div");
 const note_text = document.getElementById("note_text");
 const notes_title2 = document.getElementById("notes-title2");
 
+let current_title = '';
+let current_text = '';
+
 function new_note() {
     notes_div.style.display = "block";
     add_notes_div.style.display = "block";
@@ -162,6 +165,9 @@ function read_note(pk) {
         let title = data.title;
         let text = data.text;
 
+        current_text = text;
+        current_title = title;
+
         notes_div.style.animation = "fade_out 0.5s ease";
 
         notes_div.addEventListener("animationend", function() {
@@ -222,8 +228,8 @@ function edit_note() {
     read_notes_div.style.animation = "fade_out 0.5s ease";
 
     const handleNotesFadeOut = function () {
-        notes_title2.value = '';
-        note_text.value = '';
+        notes_title2.value = current_title;
+        note_text.value = current_text;
 
         read_notes_div.style.animation = "";
         read_notes_div.style.display = "none";
