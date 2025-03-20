@@ -1,4 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponseRedirect
+from django.urls import reverse
+from django.contrib.auth import authenticate
+from django.contrib.auth import login as auth_login
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from .models import *
+import json
 
 # Create your views here.
 def index(request):
@@ -13,5 +20,13 @@ def notes(request):
 def workouts(request):
     return render(request, "workouts.html")
 
-def add_note(request):
-    return render(request, "workouts.html")
+@csrf_exempt
+def save_note(request):
+    if request.method == "POST":
+        try:
+            data_from_js = json.loads(request.body.decode('utf-8'))
+
+        except json.JSONDecodeError as e:
+            return JsonResponse({"error": str(e)}, status=400)
+        
+    return JsonResponse({ "done": True })

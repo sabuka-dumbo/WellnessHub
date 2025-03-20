@@ -60,7 +60,23 @@ function save_note() {
     if (notes_title2.value && note_text.value) {
         // FIRST SEND THEM TO BACK
 
-        
+        fetch("/save_note/", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ 
+                "note_title": notes_title2.value,
+                "note_text": note_text.value,
+            }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            let done = data.done;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
         
         add_notes_div.style.animation = "fade_out 0.5s ease";
 
@@ -106,26 +122,6 @@ fetch("/edit_word/", {
     .then(response => response.json())
     .then(data => {
         let done = data.done;
-
-        if (done == false) {
-            warning_div.style.display = 'block';
-            warning_div.style.animation = 'warning-animation 1s ease';
-            warning_text.innerText = "Please fill in all the fields above";
-            
-            warning_div.addEventListener("animationend", function() {
-                warning_div.style.animation = '';
-                warning_div.style.display = "block";
-                
-                setTimeout(function() {
-                    warning_div.style.animation = 'warning-animation2 2s ease';
-            
-                    warning_div.addEventListener("animationend", function() {
-                        warning_div.style.animation = '';
-                        warning_div.style.display = "none";
-                    });
-                }, 1500);
-            });
-        }
     })
     .catch(error => {
         console.error('Error:', error);
