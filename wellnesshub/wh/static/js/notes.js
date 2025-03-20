@@ -1,9 +1,13 @@
 const notes_div = document.getElementById("notes-div");
 const add_notes_div = document.getElementById("add-notes-div");
 const read_notes_div = document.getElementById("read-notes-div");
+const edit_notes_div = document.getElementById("edit-notes-div");
 
 const note_text = document.getElementById("note_text");
 const notes_title2 = document.getElementById("notes-title2");
+
+const edit_note_text = document.getElementById("note_text");
+const edit_notes_title2 = document.getElementById("notes-title2");
 
 let current_title = '';
 let current_text = '';
@@ -224,25 +228,24 @@ function close_note() {
 
 function edit_note() {
     read_notes_div.style.display = "block";
-    add_notes_div.style.display = "block";
+    edit_notes_div.style.display = "block";
     read_notes_div.style.animation = "fade_out 0.5s ease";
-    notes_title2.value = current_title;
-    note_text.value = current_text;
-    console.log(notes_title2.value, current_title)
+    edit_notes_title2.value = current_title;
+    edit_note_text.value = current_text;
 
     const handleNotesFadeOut = function () {
         read_notes_div.style.animation = "";
         read_notes_div.style.display = "none";
 
-        add_notes_div.style.display = "block";
-        add_notes_div.style.animation = "fade_in 0.5s ease";
+        edit_notes_div.style.display = "block";
+        edit_notes_div.style.animation = "fade_in 0.5s ease";
 
         const handleAddNotesFadeIn = function () {
-            add_notes_div.style.animation = "";
-            add_notes_div.removeEventListener("animationend", handleAddNotesFadeIn);
+            edit_notes_div.style.animation = "";
+            edit_notes_div.removeEventListener("animationend", handleAddNotesFadeIn);
         };
 
-        add_notes_div.addEventListener("animationend", handleAddNotesFadeIn);
+        edit_notes_div.addEventListener("animationend", handleAddNotesFadeIn);
         read_notes_div.removeEventListener("animationend", handleNotesFadeOut);
     };
 
