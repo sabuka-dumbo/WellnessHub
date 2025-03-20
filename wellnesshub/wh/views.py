@@ -37,7 +37,7 @@ def save_note(request):
 
             new_note.save()
 
-            return JsonResponse({"saved": "Saved"})            
+            return JsonResponse({"saved": "Saved", "note_id": new_note.pk, "note_date": new_note.date})            
 
         except json.JSONDecodeError as e:
             return JsonResponse({"error": str(e)}, status=400)

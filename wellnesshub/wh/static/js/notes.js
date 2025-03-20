@@ -73,9 +73,18 @@ function save_note() {
         .then(response => response.json())
         .then(data => {
             let saved = data.saved;
+            let note_id = data.note_id;
+            let note_date = data.note_date;
             console.log(saved)
 
-            
+            notes_div.innerHTML += `
+                <div class="note" id='note${note_id}'>
+                    <h1 class="note-title">${notes_title2.value}</h1>
+                    <h1 class="note-date">${note_date}</h1>
+                    <button class="note-button1">Delete Note</button>
+                    <button class="note-button2">Read Note</button>
+                </div>
+            `;
 
             add_notes_div.style.animation = "fade_out 0.5s ease";
 
