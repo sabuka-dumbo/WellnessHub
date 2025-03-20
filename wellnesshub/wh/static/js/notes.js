@@ -86,3 +86,47 @@ function save_note() {
         // GIVE ALARM TO PERSON, THAT ALL OF THE FIELDS MUST BE FILLED!
     }
 }
+
+/* 
+
+fetch("/edit_word/", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ 
+            "old_word": old_word,
+            "old_meaning": old_meaning,
+            "new_word": edit_input.value,
+            "new_meaning": edit_input2.value,
+        }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        let done = data.done;
+
+        if (done == false) {
+            warning_div.style.display = 'block';
+            warning_div.style.animation = 'warning-animation 1s ease';
+            warning_text.innerText = "Please fill in all the fields above";
+            
+            warning_div.addEventListener("animationend", function() {
+                warning_div.style.animation = '';
+                warning_div.style.display = "block";
+                
+                setTimeout(function() {
+                    warning_div.style.animation = 'warning-animation2 2s ease';
+            
+                    warning_div.addEventListener("animationend", function() {
+                        warning_div.style.animation = '';
+                        warning_div.style.display = "none";
+                    });
+                }, 1500);
+            });
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+
+*/
