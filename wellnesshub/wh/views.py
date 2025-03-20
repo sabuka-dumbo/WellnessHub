@@ -79,3 +79,20 @@ def read_note(request):
             return JsonResponse({"error": str(e)}, status=400)
         
     return JsonResponse({ "done": True })
+
+@csrf_exempt
+def edit_note(request):
+    if request.method == "POST":
+        try:
+            data_from_js = json.loads(request.body.decode('utf-8'))
+
+            note_pk = data_from_js.get("note_pk")
+
+            note = Note.objects.all().get(pk=note_pk)
+
+            return JsonResponse({"edit": "Edited"})            
+
+        except json.JSONDecodeError as e:
+            return JsonResponse({"error": str(e)}, status=400)
+        
+    return JsonResponse({ "done": True })

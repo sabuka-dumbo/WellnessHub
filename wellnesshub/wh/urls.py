@@ -12,4 +12,5 @@ urlpatterns = [
     path('add_note/', views.save_note, name="add_note"),
     path('delete_note/', views.delete_note, name="delete_note"),
     path('read_note/', views.read_note, name="read_note"),
+    path('edit_note/', views.edit_note, name="edit_note"),
 ]

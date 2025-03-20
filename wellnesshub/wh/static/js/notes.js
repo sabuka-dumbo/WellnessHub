@@ -217,5 +217,26 @@ function close_note() {
 }
 
 function edit_note() {
-    
+    fetch("/edit_note/", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ 
+            "note_pk": pk,
+        }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        let deleted = data.delete;
+
+        let noteDiv = notes_div.querySelector(`#note${pk}`);
+
+        if (noteDiv) {
+            noteDiv.remove();
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
 }
