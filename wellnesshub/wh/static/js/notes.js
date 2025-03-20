@@ -59,6 +59,8 @@ function close_note() {
 function save_note() {
     if (notes_title2.value && note_text.value) {
         // FIRST SEND THEM TO BACK
+
+        
         
         add_notes_div.style.animation = "fade_out 0.5s ease";
 
