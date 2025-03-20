@@ -226,11 +226,11 @@ function edit_note() {
     read_notes_div.style.display = "block";
     add_notes_div.style.display = "block";
     read_notes_div.style.animation = "fade_out 0.5s ease";
+    notes_title2.value = current_title;
+    note_text.value = current_text;
+    console.log(notes_title2.value, current_title)
 
     const handleNotesFadeOut = function () {
-        notes_title2.value = current_title;
-        note_text.value = current_text;
-
         read_notes_div.style.animation = "";
         read_notes_div.style.display = "none";
 
