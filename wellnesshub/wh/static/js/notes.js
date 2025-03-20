@@ -80,7 +80,7 @@ function save_note() {
             notes_div.innerHTML += `
                 <div class="note" id='note${note_id}'>
                     <h1 class="note-title">${notes_title2.value}</h1>
-                    <h1 class="note-date">${note_date}</h1>
+                    <h1 class="note-date">todays month day and year like March 3, 2025</h1>
                     <button class="note-button1">Delete Note</button>
                     <button class="note-button2">Read Note</button>
                 </div>
