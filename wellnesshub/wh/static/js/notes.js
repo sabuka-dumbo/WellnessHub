@@ -177,8 +177,9 @@ function read_note(pk) {
                 read_notes_div.style.animation = '';
                 read_notes_div.style.display = "block";
 
-                read_notes_title2.value = title;
-                read_notes_text.value = text;
+                read_notes_title2.text = title;
+                read_notes_text.text = text;
+                document.getElementById("read_note_text").value = "Your new note text here";
             })
         })
     })
