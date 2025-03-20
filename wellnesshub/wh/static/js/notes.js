@@ -85,8 +85,8 @@ function save_note() {
                 <div class="note" id='note${note_id}'>
                     <h1 class="note-title">${notes_title2.value}</h1>
                     <h1 class="note-date">${formattedDate}</h1>
-                    <button class="note-button1">Delete Note</button>
-                    <button class="note-button2">Read Note</button>
+                    <button class="note-button1" onclick="delete_note('${note_id}')" style="cursor: pointer;">Delete Note</button>
+                    <button class="note-button2" onclick="read_note('${note_id}')" style="cursor: pointer;">Read Note</button>
                 </div>
             `;
 
@@ -140,6 +140,38 @@ function delete_note(pk) {
         if (noteDiv) {
             noteDiv.remove();
         }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+
+function read_note(pk) {
+    fetch("/read_note/", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ 
+            "note_pk": pk,
+        }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        let title = data.title;
+        let text = data.text;
+
+        notes_div.style.animation = "fade_out 0.5s ease";
+
+        notes_div.addEventListener("animationend", function() {
+            notes_div.style.animation = '';
+            add_notes_div.style.animation = "face_in 0.5s ease";
+            notes_div.style.opacity = "0";
+
+            add_notes_div.addEventListener("animationend", function() {
+                
+            })
+        })
     })
     .catch(error => {
         console.error('Error:', error);
