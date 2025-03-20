@@ -75,6 +75,8 @@ function save_note() {
             let saved = data.saved;
             console.log(saved)
 
+            
+
             add_notes_div.style.animation = "fade_out 0.5s ease";
 
             const handleAddNotesFadeOut = function () {
