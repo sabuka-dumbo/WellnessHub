@@ -60,7 +60,7 @@ function save_note() {
     if (notes_title2.value && note_text.value) {
         // FIRST SEND THEM TO BACK
 
-        fetch("/save_note/", {
+        fetch("/add_note/", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
