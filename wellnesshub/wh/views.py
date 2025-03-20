@@ -43,3 +43,19 @@ def save_note(request):
             return JsonResponse({"error": str(e)}, status=400)
         
     return JsonResponse({ "done": True })
+
+@csrf_exempt
+def delete_note(request):
+    if request.method == "POST":
+        try:
+            data_from_js = json.loads(request.body.decode('utf-8'))
+
+            note_text = data_from_js.get("note_text")
+
+
+            return JsonResponse({"delete": "Deleted"})            
+
+        except json.JSONDecodeError as e:
+            return JsonResponse({"error": str(e)}, status=400)
+        
+    return JsonResponse({ "done": True })
