@@ -355,9 +355,33 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 321px) {
     .female_radio_text {
-        margin-right: 30px;
+        margin-right: 35px;
+    }
+
+    .ss-input {
+        width: calc(100% - 20px);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .ss-input2 {
+        width: calc(100% - 20px);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .ss-input3 {
+        width: calc(100% - 20px);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
@@ -369,7 +393,11 @@
 
 @media screen and (max-width: 279px) {
     .female_radio_text {
-        margin-right: 6px;
+        margin-right: 0px;
+    }
+
+    .MorFradio {
+        width: 150%;
     }
 }
 
