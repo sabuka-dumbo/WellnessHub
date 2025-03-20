@@ -345,12 +345,12 @@
 
 @media screen and (max-width: 480px) {
     .workout-div {
-        left: 20px;
+        left: 30px;
         width: calc(100% - 60px);
     }
     
     .results-div {
-        left: 20px;
+        left: 30px;
         width: calc(100% - 60px);
     }
 }
