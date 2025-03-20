@@ -406,6 +406,7 @@
     font-family: "Itim";
     font-size: 20px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .other-div {
