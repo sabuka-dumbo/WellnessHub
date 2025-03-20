@@ -121,26 +121,21 @@ function save_note() {
     }
 }
 
-/* 
-
-fetch("/edit_word/", {
+function delete_note(pk) {
+    fetch("/delete_note/", {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({ 
-            "old_word": old_word,
-            "old_meaning": old_meaning,
-            "new_word": edit_input.value,
-            "new_meaning": edit_input2.value,
+            "note_title": notes_title2.value,
         }),
     })
     .then(response => response.json())
     .then(data => {
-        let done = data.done;
+        let saved = data.saved;
     })
     .catch(error => {
         console.error('Error:', error);
     });
-
-*/
+}
