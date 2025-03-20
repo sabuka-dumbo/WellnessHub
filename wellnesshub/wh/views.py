@@ -15,7 +15,11 @@ def calculator(request):
     return render(request, "calculator.html")
 
 def notes(request):
-    return render(request, "notes.html")
+    notes_list = Note.objects.all().filter(user=request.user)
+
+    return render(request, "notes.html", {
+        "notes": notes_list
+    })
 
 def workouts(request):
     return render(request, "workouts.html")
@@ -29,7 +33,9 @@ def save_note(request):
             note_title = data_from_js.get("note_title")
             note_text = data_from_js.get("note_text")
 
-            new_note = Note.objects.create(user=request.user, title=note_title, note_text=note_text)
+            new_note = Note.objects.create(user=request.user, title=note_title, text=note_text)
+
+            new_note.save()
 
             return JsonResponse({"saved": "Saved"})            
 
