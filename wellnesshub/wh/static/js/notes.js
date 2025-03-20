@@ -134,6 +134,12 @@ function delete_note(pk) {
     .then(response => response.json())
     .then(data => {
         let deleted = data.delete;
+
+        let noteDiv = notes_div.querySelector(`#note${pk}`);
+
+        if (noteDiv) {
+            noteDiv.remove();
+        }
     })
     .catch(error => {
         console.error('Error:', error);
