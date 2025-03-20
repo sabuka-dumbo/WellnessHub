@@ -41,28 +41,23 @@ if (calculation == "Body Fat") {
     calc_field5.placeholder = "Enter Waist Circumference";
 
     submit.addEventListener("click", function() {
-        let height = parseFloat(calc_field1.value);
-        let weight = parseFloat(calc_field2.value); // optional, not used
-        let neck = parseFloat(calc_field3.value);
-        let hip = parseFloat(calc_field4.value);
-        let waist = parseFloat(calc_field5.value);
-
-        let bodyfat;
-
-        if (MorF1 === true) {
-            bodyfat = calculateBodyFatWomen(waist, neck, height, hip);
+        if (MorF1 == true) {
+            bodyfat = calculateBodyFatWomen(calc_field5.value, calc_field3.value, calc_field1.value, calc_field4.value)
         } else {
-            bodyfat = calculateBodyFatMen(waist, neck, height);
+            bodyfat = calculateBodyFatMen(calc_field5.value, calc_field3.value, calc_field1.value)
         }
-                
-        console.log("Body Fat %:", bodyfat.toFixed(1));
-    });
+        console.log(bodyfat)
+    })
+} else if (calculation == "Lean Body Mass") {
+
 }
-    
+
 function calculateBodyFatMen(waist, neck, height) {
-    return 86.010 * Math.log10(waist - neck) - 70.041 * Math.log10(height) + 36.76;
+    const log10 = Math.log10;
+    return 86.010 * log10(waist - neck) - 70.041 * log10(height) + 36.76;
 }
 
 function calculateBodyFatWomen(waist, neck, height, hip) {
-    return 163.205 * Math.log10(waist + hip - neck) - 97.684 * Math.log10(height) - 78.387;
+    const log10 = Math.log10;
+    return 163.205 * log10(waist + hip - neck) - 97.684 * log10(height) - 78.387;
 }
