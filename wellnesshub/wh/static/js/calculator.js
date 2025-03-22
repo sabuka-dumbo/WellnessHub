@@ -76,6 +76,7 @@ function leanmasscalculation() {
     calc_field5.placeholder = "Enter Waist Circumference";
 
     submit.addEventListener("click", function() {
+        console.log(calc_field1.value, calc_field2.value);
         if (MorF1.checked) {
             result = calculateLeanMassMen(calc_field1.value, calc_field2.value)
         } else {
