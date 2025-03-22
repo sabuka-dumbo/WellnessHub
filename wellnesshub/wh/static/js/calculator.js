@@ -42,9 +42,9 @@ if (calculation == "Body Fat") {
 
     submit.addEventListener("click", function() {
         if (MorF1.checked) {
-            bodyfat = calculateBodyFatWomen(calc_field5.value, calc_field3.value, calc_field1.value, calc_field4.value)
+            bodyfat = calculateBodyFatWomen(calc_field5.value, calc_field3.value, calc_field1.value, calc_field4.value, calc_field1_1)
         } else {
-            bodyfat = calculateBodyFatMen(calc_field5.value, calc_field3.value, calc_field1.value)
+            bodyfat = calculateBodyFatMen(calc_field5.value, calc_field3.value, calc_field1.value, calc_field1_1)
         }
         console.log(bodyfat)
     })
@@ -53,12 +53,14 @@ if (calculation == "Body Fat") {
 }
 
 function calculateBodyFatMen(waist, neck, height, metric) {
-    if (metric == "cm") {
+    if (metric != "cm") {
+        const log10 = Math.log10;
+        const denominator = 86.010 * log10(neck) - 70.041 * log10(height) + 36.76
+        return denominator;
+    } else {
         const log10 = Math.log10;
         const denominator = 1.0324 - 0.19077 * log10(waist - neck) + 0.15456 * log10(height);
         return (495 / denominator) - 450;
-    } else {
-
     }
 }
 
