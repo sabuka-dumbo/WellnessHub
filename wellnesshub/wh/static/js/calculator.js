@@ -19,12 +19,20 @@ addEventListener("DOMContentLoaded", bodyfatcalculation())
 function bodyfatcalculation() {
     calculator_title.innerText = "Body Fat Calculator:"
 
-    calc_field1.style.display = "block";
-    calc_field2.style.display = "block";
-    calc_field3.style.display = "block";
-    calc_field4.style.display = "block";
-    calc_field5.style.display = "block";
-    calc_field6.style.display = "none";
+    calculator_title.innerText = "Lean Body Mass Calculator:"
+
+    calc_field1.style.opacity = "100%";
+    calc_field2.style.opacity = "100%";
+    calc_field3.style.opacity = "100%";
+    calc_field4.style.opacity = "100%";
+    calc_field5.style.opacity = "100%";
+    calc_field6.style.opacity = "50%";
+    calc_field1.disabled = false;
+    calc_field2.disabled = false;
+    calc_field3.disabled = false;
+    calc_field4.disabled = false;
+    calc_field5.disabled = false;
+    calc_field6.disabled = true;
 
     calc_field1.placeholder = "Enter Height";
     calc_field2.placeholder = "Enter Weight";
@@ -50,12 +58,18 @@ function bodyfatcalculation() {
 function leanmasscalculation() {
     calculator_title.innerText = "Lean Body Mass Calculator:"
 
-    calc_field1.style.display = "block";
-    calc_field2.style.display = "block";
-    calc_field3.style.display = "none";
-    calc_field4.style.display = "none";
-    calc_field5.style.display = "none";
-    calc_field6.style.display = "none";
+    calc_field1.style.opacity = "100%";
+    calc_field2.style.opacity = "100%";
+    calc_field3.style.opacity = "50%";
+    calc_field4.style.opacity = "50%";
+    calc_field5.style.opacity = "50%";
+    calc_field6.style.opacity = "50%";
+    calc_field1.disabled = false;
+    calc_field2.disabled = false;
+    calc_field3.disabled = true;
+    calc_field4.disabled = true;
+    calc_field5.disabled = true;
+    calc_field6.disabled = true;
 
     calc_field1.placeholder = "Enter Height";
     calc_field2.placeholder = "Enter Weight";
