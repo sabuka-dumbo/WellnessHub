@@ -76,11 +76,10 @@ function leanmasscalculation() {
     calc_field5.placeholder = "Enter Waist Circumference";
 
     submit.addEventListener("click", function() {
-        console.log(calc_field1.value, calc_field2.value);
         if (MorF1.checked) {
-            result = calculateLeanMassMen(calc_field1.value, calc_field2.value)
+            result = calculateLeanMassWomen(calc_field1.value, calc_field2.value)
         } else {
-            result = calculateBodyFatWomen(calc_field1.value, calc_field2.value)
+            result = calculateLeanMassMen(calc_field1.value, calc_field2.value)
         }
 
         const result2_title = document.getElementById("result2-title");
@@ -112,6 +111,7 @@ function calculateBodyFatWomen(waist, neck, height, hip) {
 
 function calculateLeanMassMen(height, weight) {
     const eLBM = 0.32810 * weight + 0.33929 * height - 29.5336;
+    console.log(eLBM)
     return eLBM;
 }
 
