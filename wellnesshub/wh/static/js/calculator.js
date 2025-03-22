@@ -37,8 +37,8 @@ if (calculation == "Body Fat") {
         const result_title2 = document.getElementById("result-title2");
         const results_title2 = document.getElementById("results-title2");
 
-        result_title2.innerText = bodyfat;
-        results_title2.innerText = bodyfat;
+        result_title2.value = bodyfat;
+        results_title2.value = bodyfat;
     })
 } else if (calculation == "Lean Body Mass") {
 
