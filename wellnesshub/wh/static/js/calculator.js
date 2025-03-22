@@ -88,7 +88,6 @@ function bodyfatcalculation() {
     });
 }
 
-
 function leanmasscalculation() {
     calculator_title.innerText = "Lean Body Mass Calculator:"
 
