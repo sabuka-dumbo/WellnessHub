@@ -434,7 +434,7 @@
 
 @media screen and (max-width: 580px) {
     .calculator-div {
-        grid-template-columns: 17.5px calc(100% - 90px) 5px 50px 17.5px;
+        grid-template-columns: 20px calc(100% - 55px) 20px;
         grid-template-rows: none;
         height: max-content;
         padding-bottom: 20px;
