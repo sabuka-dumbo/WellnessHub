@@ -5,13 +5,6 @@ const calc_field4 = document.getElementById("calc_field4");
 const calc_field5 = document.getElementById("calc_field5");
 const calc_field6 = document.getElementById("calc_field6");
 
-const calc_field1_1 = document.getElementById("calc_field1_1");
-const calc_field2_2 = document.getElementById("calc_field2_2");
-const calc_field3_3 = document.getElementById("calc_field3_3");
-const calc_field4_4 = document.getElementById("calc_field4_4");
-const calc_field5_5 = document.getElementById("calc_field5_5");
-const calc_field6_6 = document.getElementById("calc_field6_6");
-
 const MorF1 = document.getElementById("MorF1"); // Female
 const MorF2 = document.getElementById("MorF2"); // Male
 
@@ -27,13 +20,6 @@ if (calculation == "Body Fat") {
     calc_field5.style.display = "block";
     calc_field6.style.display = "none";
 
-    calc_field1_1.style.display = "block";
-    calc_field2_2.style.display = "block";
-    calc_field3_3.style.display = "block";
-    calc_field4_4.style.display = "block";
-    calc_field5_5.style.display = "block";
-    calc_field6_6.style.display = "none";
-
     calc_field1.placeholder = "Enter Height";
     calc_field2.placeholder = "Enter Weight";
     calc_field3.placeholder = "Enter Neck Circumference";
@@ -42,9 +28,9 @@ if (calculation == "Body Fat") {
 
     submit.addEventListener("click", function() {
         if (MorF1.checked) {
-            bodyfat = calculateBodyFatWomen(calc_field5.value, calc_field3.value, calc_field1.value, calc_field4.value, calc_field1_1);
+            bodyfat = calculateBodyFatWomen(calc_field5.value, calc_field3.value, calc_field1.value, calc_field4.value);
         } else {
-            bodyfat = calculateBodyFatMen(calc_field5.value, calc_field3.value, calc_field1.value, calc_field1_1);
+            bodyfat = calculateBodyFatMen(calc_field5.value, calc_field3.value, calc_field1.value);
         }
         console.log(bodyfat)
     })

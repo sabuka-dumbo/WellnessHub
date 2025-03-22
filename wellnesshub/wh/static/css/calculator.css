@@ -21,7 +21,7 @@
     grid-column-end: 3;
 
     grid-template-rows: 20px calc((100% - 60px) / 5) 5px calc((100% - 60px) / 5) 5px calc((100% - 60px) / 5) 5px calc((100% - 60px) / 5) 5px calc((100% - 60px) / 5) 20px;
-    grid-template-columns: 17.5px calc((100% - 165px) /2) 5px 50px 20px calc((100% - 165px) /2) 5px 50px 17.5px;
+    grid-template-columns: 17.5px calc((100% - 37.5px) /2) 20px calc((100% - 37.5px) /2) 20px;
 }
 
 .calculator-title {
@@ -64,31 +64,6 @@
     outline: none;
 }
 
-.calc_field1_1 {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 110;
-    height: calc(80% + 4px);
-    font-size: 12px;
-    font-family: "Itim";
-    font-weight: bold;
-    grid-column-start: 4;
-    grid-row: 4;
-    grid-column-end: 5;
-    display: inline-grid;
-    padding: 0;
-    margin: 0;
-    background-color: white;
-    border-radius: 20px;
-    border: 2.5px solid #D9D9D9;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 2px;
-    padding-left: 0px;
-    outline: none;
-}
-
 .calc_field2 {
     position: relative;
     top: 0;
@@ -111,31 +86,6 @@
     padding-bottom: 10px;
     padding-right: 20px;
     padding-left: 20px;
-    outline: none;
-}
-
-.calc_field2_2 {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 110;
-    height: calc(80% + 4px);
-    font-size: 12px;
-    font-family: "Itim";
-    font-weight: bold;
-    grid-column-start: 4;
-    grid-row: 6;
-    grid-column-end: 5;
-    display: inline-grid;
-    padding: 0;
-    margin: 0;
-    background-color: white;
-    border-radius: 20px;
-    border: 2.5px solid #D9D9D9;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 2px;
-    padding-left: 0px;
     outline: none;
 }
 
@@ -164,31 +114,6 @@
     outline: none;
 }
 
-.calc_field3_3 {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 110;
-    height: calc(80% + 4px);
-    font-size: 12px;
-    font-family: "Itim";
-    font-weight: bold;
-    grid-column-start: 4;
-    grid-row: 8;
-    grid-column-end: 5;
-    display: inline-grid;
-    padding: 0;
-    margin: 0;
-    background-color: white;
-    border-radius: 20px;
-    border: 2.5px solid #D9D9D9;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 2px;
-    padding-left: 0px;
-    outline: none;
-}
-
 .calc_field4 {
     position: relative;
     top: 0;
@@ -214,31 +139,6 @@
     outline: none;
 }
 
-.calc_field4_4 {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 110;
-    height: calc(80% + 4px);
-    font-size: 12px;
-    font-family: "Itim";
-    font-weight: bold;
-    grid-column-start: 4;
-    grid-row: 10;
-    grid-column-end: 5;
-    display: inline-grid;
-    padding: 0;
-    margin: 0;
-    background-color: white;
-    border-radius: 20px;
-    border: 2.5px solid #D9D9D9;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 2px;
-    padding-left: 0px;
-    outline: none;
-}
-
 .calc_field5 {
     position: relative;
     top: 0;
@@ -248,9 +148,9 @@
     font-size: 20px;
     font-family: "Itim";
     font-weight: bold;
-    grid-column-start: 6;
+    grid-column-start: 4;
     grid-row: 4;
-    grid-column-end: 7;
+    grid-column-end: 5;
     display: inline-grid;
     padding: 0;
     margin: 0;
@@ -261,31 +161,6 @@
     padding-bottom: 10px;
     padding-right: 20px;
     padding-left: 20px;
-    outline: none;
-}
-
-.calc_field5_5 {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 110;
-    height: calc(80% + 4px);
-    font-size: 12px;
-    font-family: "Itim";
-    font-weight: bold;
-    grid-column-start: 8;
-    grid-row: 4;
-    grid-column-end: 9;
-    display: inline-grid;
-    padding: 0;
-    margin: 0;
-    background-color: white;
-    border-radius: 20px;
-    border: 2.5px solid #D9D9D9;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 2px;
-    padding-left: 0px;
     outline: none;
 }
 
@@ -311,31 +186,6 @@
     padding-bottom: 10px;
     padding-right: 20px;
     padding-left: 20px;
-    outline: none;
-}
-
-.calc_field6_6 {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 110;
-    height: calc(80% + 4px);
-    font-size: 12px;
-    font-family: "Itim";
-    font-weight: bold;
-    grid-column-start: 8;
-    grid-row: 6;
-    grid-column-end: 9;
-    display: inline-grid;
-    padding: 0;
-    margin: 0;
-    background-color: white;
-    border-radius: 20px;
-    border: 2.5px solid #D9D9D9;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 2px;
-    padding-left: 0px;
     outline: none;
 }
 
