@@ -46,6 +46,7 @@ function bodyfatcalculation() {
     calc_field5.placeholder = "Enter Waist Circumference";
 
     submit.addEventListener("click", function() {
+        let bodyfat;
         if (MorF1.checked) {
             bodyfat = calculateBodyFatWomen(calc_field5.value, calc_field3.value, calc_field1.value, calc_field4.value);
         } else {
@@ -57,8 +58,36 @@ function bodyfatcalculation() {
 
         result2_title.innerText = Math.floor(bodyfat * 10) / 10 + "% Body Fat";
         results_title2.innerText = Math.floor(bodyfat * 10) / 10 + "% Body Fat";
-    })
+
+        const result_for_ai = Math.floor(bodyfat * 10) / 10;
+        const result2_for_ai = "Body Fat";
+
+        async function generateInsight() {
+            const prompt = `Give a short health explanation about a person with ${result_for_ai}% ${result2_for_ai}. Include if it's normal or not, what it could mean, and any possible health effects.`;
+
+            const response = await fetch("https://api.openai.com/v1/chat/completions", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer YOUR_API_KEY_HERE"
+                },
+                body: JSON.stringify({
+                    model: "gpt-3.5-turbo",
+                    messages: [
+                        { role: "user", content: prompt }
+                    ]
+                })
+            });
+
+            const data = await response.json();
+            const aiReply = data.choices[0].message.content;
+            document.getElementById("aiInsight").innerText = aiReply;
+        }
+
+        generateInsight();
+    });
 }
+
 
 function leanmasscalculation() {
     calculator_title.innerText = "Lean Body Mass Calculator:"
