@@ -21,7 +21,7 @@
     grid-column-end: 3;
 
     grid-template-rows: 20px calc((100% - 60px) / 5) 5px calc((100% - 60px) / 5) 5px calc((100% - 60px) / 5) 5px calc((100% - 60px) / 5) 5px calc((100% - 60px) / 5) 20px;
-    grid-template-columns: 17.5px calc((100% - 37.5px) /2) 20px calc((100% - 37.5px) /2) 20px;
+    grid-template-columns: 20px calc((100% - 55px) /2) 15px calc((100% - 55px) /2) 20px;
 }
 
 .calculator-title {
