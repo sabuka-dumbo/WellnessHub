@@ -61,3 +61,8 @@ function calculateBodyFatWomen(waist, neck, height, hip) {
     
     return bodyFat
 }
+
+function calculateLeanMassMen(height, Weight) {
+    const denominator = 0.32810;
+    return denominator;
+}
