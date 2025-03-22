@@ -32,7 +32,6 @@ if (calculation == "Body Fat") {
         } else {
             bodyfat = calculateBodyFatMen(calc_field5.value, calc_field3.value, calc_field1.value);
         }
-        console.log(bodyfat)
 
         const result2_title = document.getElementById("result2-title");
         const results_title2 = document.getElementById("results-title2");
