@@ -17,6 +17,8 @@ let calculation = "Body Fat";
 addEventListener("DOMContentLoaded", bodyfatcalculation())
 
 function bodyfatcalculation() {
+    calculator_title.innerText = "Body Fat Calculator:"
+
     calc_field1.style.display = "block";
     calc_field2.style.display = "block";
     calc_field3.style.display = "block";
@@ -45,12 +47,14 @@ function bodyfatcalculation() {
     })
 }
 
-function bodyfatcalculation() {
+function leanmasscalculation() {
+    calculator_title.innerText = "Lean Body Mass Calculator:"
+
     calc_field1.style.display = "block";
     calc_field2.style.display = "block";
-    calc_field3.style.display = "block";
-    calc_field4.style.display = "block";
-    calc_field5.style.display = "block";
+    calc_field3.style.display = "none";
+    calc_field4.style.display = "none";
+    calc_field5.style.display = "none";
     calc_field6.style.display = "none";
 
     calc_field1.placeholder = "Enter Height";
