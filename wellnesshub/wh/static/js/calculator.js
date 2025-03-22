@@ -109,12 +109,12 @@ function calculateBodyFatWomen(waist, neck, height, hip) {
     return bodyFat
 }
 
-function calculateLeanMassMen(height, Weight) {
-    const denominator = 0.32810 * Weight + 0.33929 * height - 29.5336;
-    return denominator;
+function calculateLeanMassMen(height, weight) {
+    const eLBM = 0.32810 * weight + 0.33929 * height - 29.5336;
+    return eLBM;
 }
 
-function calculateLeanMassWomen(height, Weight) {
-    const denominator = 0.29569 * Weight + 0.41813 * height - 43.2933;
-    return denominator;
+function calculateLeanMassWomen(height, weight) {
+    const eLBM = 0.29569 * weight + 0.41813 * height - 43.2933;
+    return eLBM;
 }
