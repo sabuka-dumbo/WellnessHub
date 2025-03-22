@@ -33,39 +33,32 @@ if (calculation == "Body Fat") {
             bodyfat = calculateBodyFatMen(calc_field5.value, calc_field3.value, calc_field1.value);
         }
         console.log(bodyfat)
+
+        const result_title2 = document.getElementById("result-title2");
+        const results_title2 = document.getElementById("results-title2");
+
+        result_title2.innerText = bodyfat;
+        results_title2.innerText = bodyfat;
     })
 } else if (calculation == "Lean Body Mass") {
 
 }
 
-function calculateBodyFatMen(waist, neck, height, metric) {
-    if (metric != "cm") {
-        const log10 = Math.log10;
-        const denominator = 86.010 * log10(neck) - 70.041 * log10(height) + 36.76
-        return denominator;
-    } else {
-        const log10 = Math.log10;
-        const denominator = 1.0324 - 0.19077 * log10(waist - neck) + 0.15456 * log10(height);
-        return (495 / denominator) - 450;
-    }
+function calculateBodyFatMen(waist, neck, height) {
+    const log10 = Math.log10;
+    const denominator = 1.0324 - 0.19077 * log10(waist - neck) + 0.15456 * log10(height);
+    return (495 / denominator) - 450;
 }
 
-function calculateBodyFatWomen(waist, neck, height, hip, metric) {
+function calculateBodyFatWomen(waist, neck, height, hip) {
     waist = parseFloat(waist);
     neck = parseFloat(neck);
     height = parseFloat(height);
     hip = parseFloat(hip);
 
-    if (metric != "cm") {
-        const log10 = Math.log10;
-        const denominator = 163.205 * log10(waist + hip + neck) - 97.684 * (log10(height)) - 78.387
-
-        return denominator
-    } else {
-        const log10 = Math.log10;
-        const denominator = 1.29579 - 0.35004 * log10(waist + hip - neck) + 0.22100 * log10(height);
-        const bodyFat = (495 / denominator) - 450;
-        
-        return bodyFat
-    }
+    const log10 = Math.log10;
+    const denominator = 1.29579 - 0.35004 * log10(waist + hip - neck) + 0.22100 * log10(height);
+    const bodyFat = (495 / denominator) - 450;
+    
+    return bodyFat
 }
