@@ -77,9 +77,9 @@ function leanmasscalculation() {
 
     submit.addEventListener("click", function() {
         if (MorF1.checked) {
-            bodyfat = calculateBodyFatWomen(calc_field5.value, calc_field3.value, calc_field1.value, calc_field4.value);
+            result = calculateLeanMassMen(calc_field1.value, calc_field2.value)
         } else {
-            bodyfat = calculateBodyFatMen(calc_field5.value, calc_field3.value, calc_field1.value);
+            result = calculateBodyFatWomen(calc_field1.value, calc_field2.value)
         }
 
         const result2_title = document.getElementById("result2-title");
