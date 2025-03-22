@@ -77,16 +77,18 @@ function leanmasscalculation() {
 
     submit.addEventListener("click", function() {
         if (MorF1.checked) {
-            result = calculateLeanMassWomen(calc_field1.value, calc_field2.value)
+            let result2 = calculateLeanMassWomen(calc_field1.value, calc_field2.value)
         } else {
-            result = calculateLeanMassMen(calc_field1.value, calc_field2.value)
+            let result2 = calculateLeanMassMen(calc_field1.value, calc_field2.value)
         }
+
+        let last_result = (Math.floor(result2 * 10) / 10) + " Kg Mass"
 
         const result2_title = document.getElementById("result2-title");
         const results_title2 = document.getElementById("results-title2");
 
-        result2_title.innerText = Math.floor(result * 10) / 10 + " Kg Mass";
-        results_title2.innerText = Math.floor(result * 10) / 10; + " Kg Mass";
+        result2_title.innerText = last_result;
+        results_title2.innerText = last_result;
     })
 }
 
