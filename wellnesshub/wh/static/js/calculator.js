@@ -42,9 +42,9 @@ if (calculation == "Body Fat") {
 
     submit.addEventListener("click", function() {
         if (MorF1.checked) {
-            bodyfat = calculateBodyFatWomen(calc_field5.value, calc_field3.value, calc_field1.value, calc_field4.value, calc_field1_1)
+            bodyfat = calculateBodyFatWomen(calc_field5.value, calc_field3.value, calc_field1.value, calc_field4.value, calc_field1_1);
         } else {
-            bodyfat = calculateBodyFatMen(calc_field5.value, calc_field3.value, calc_field1.value, calc_field1_1)
+            bodyfat = calculateBodyFatMen(calc_field5.value, calc_field3.value, calc_field1.value, calc_field1_1);
         }
         console.log(bodyfat)
     })
