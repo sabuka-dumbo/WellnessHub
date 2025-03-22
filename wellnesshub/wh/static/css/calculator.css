@@ -149,7 +149,7 @@
     font-family: "Itim";
     font-weight: bold;
     grid-column-start: 4;
-    grid-row: 6;
+    grid-row: 4;
     grid-column-end: 5;
     display: inline-grid;
     padding: 0;
@@ -193,8 +193,8 @@
     position: relative;
     top: 0;
     left: 0;
-    grid-column-start: 6;
-    grid-column-end: 7;
+    grid-column-start: 4;
+    grid-column-end: 5;
     grid-row: 8;
 }
 
@@ -250,8 +250,8 @@
     color: #777777;
     border: none;
     outline: none;
-    grid-column-start: 6;
-    grid-column-end: 9;
+    grid-column-start: 4;
+    grid-column-end: 5;
     grid-row: 10;
     font-family: "Itim";
     font-size: 20px;
