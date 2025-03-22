@@ -85,8 +85,8 @@ function leanmasscalculation() {
         const result2_title = document.getElementById("result2-title");
         const results_title2 = document.getElementById("results-title2");
 
-        result2_title.innerText = Math.floor(bodyfat * 10) / 10 + "% Lean Mass";
-        results_title2.innerText = Math.floor(bodyfat * 10) / 10 + "% Lean Mass";
+        result2_title.innerText = Math.floor(result * 10) / 10 + "% Lean Mass";
+        results_title2.innerText = Math.floor(result * 10) / 10; + "% Lean Mass";
     })
 }
 
