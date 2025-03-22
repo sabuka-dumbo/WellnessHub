@@ -32,6 +32,13 @@ function bodyfatcalculation() {
     calc_field5.disabled = false;
     calc_field6.disabled = true;
 
+    calc_field1.value = '';
+    calc_field2.value = '';
+    calc_field3.value = '';
+    calc_field4.value = '';
+    calc_field5.value = '';
+    calc_field6.value = '';
+
     calc_field1.placeholder = "Enter Height";
     calc_field2.placeholder = "Enter Weight";
     calc_field3.placeholder = "Enter Neck Circumference";
@@ -62,6 +69,14 @@ function leanmasscalculation() {
     calc_field4.style.opacity = "50%";
     calc_field5.style.opacity = "50%";
     calc_field6.style.opacity = "50%";
+
+    calc_field1.value = '';
+    calc_field2.value = '';
+    calc_field3.value = '';
+    calc_field4.value = '';
+    calc_field5.value = '';
+    calc_field6.value = '';
+
     calc_field1.disabled = false;
     calc_field2.disabled = false;
     calc_field3.disabled = true;
