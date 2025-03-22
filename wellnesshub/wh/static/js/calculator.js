@@ -64,14 +64,22 @@ function calculateBodyFatMen(waist, neck, height, metric) {
     }
 }
 
-function calculateBodyFatWomen(waist, neck, height, hip) {
+function calculateBodyFatWomen(waist, neck, height, hip, metric) {
     waist = parseFloat(waist);
     neck = parseFloat(neck);
     height = parseFloat(height);
     hip = parseFloat(hip);
 
-    const log10 = Math.log10;
-    const denominator = 1.29579 - 0.35004 * log10(waist + hip - neck) + 0.22100 * log10(height);
-    const bodyFat = (495 / denominator) - 450;
-    return bodyFat.toFixed(2); // Rounded to 2 decimals
+    if (metric != "cm") {
+        const log10 = Math.log10;
+        const denominator = 163.205 * log10(waist + hip + neck) - 97.684 * (log10(height)) - 78.387
+
+        return denominator
+    } else {
+        const log10 = Math.log10;
+        const denominator = 1.29579 - 0.35004 * log10(waist + hip - neck) + 0.22100 * log10(height);
+        const bodyFat = (495 / denominator) - 450;
+        
+        return bodyFat
+    }
 }
