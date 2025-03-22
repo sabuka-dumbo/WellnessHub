@@ -12,7 +12,9 @@ const submit = document.getElementById("submit");
 
 let calculation = "Body Fat";
 
-if (calculation == "Body Fat") {
+addEventListener("DOMContentLoaded", bodyfatcalculation())
+
+function bodyfatcalculation() {
     calc_field1.style.display = "block";
     calc_field2.style.display = "block";
     calc_field3.style.display = "block";
@@ -39,8 +41,35 @@ if (calculation == "Body Fat") {
         result2_title.innerText = Math.floor(bodyfat * 10) / 10 + "% Body Fat";
         results_title2.innerText = Math.floor(bodyfat * 10) / 10 + "% Body Fat";
     })
-} else if (calculation == "Lean Body Mass") {
+}
 
+function bodyfatcalculation() {
+    calc_field1.style.display = "block";
+    calc_field2.style.display = "block";
+    calc_field3.style.display = "block";
+    calc_field4.style.display = "block";
+    calc_field5.style.display = "block";
+    calc_field6.style.display = "none";
+
+    calc_field1.placeholder = "Enter Height";
+    calc_field2.placeholder = "Enter Weight";
+    calc_field3.placeholder = "Enter Neck Circumference";
+    calc_field4.placeholder = "Enter Hip Circumference";
+    calc_field5.placeholder = "Enter Waist Circumference";
+
+    submit.addEventListener("click", function() {
+        if (MorF1.checked) {
+            bodyfat = calculateBodyFatWomen(calc_field5.value, calc_field3.value, calc_field1.value, calc_field4.value);
+        } else {
+            bodyfat = calculateBodyFatMen(calc_field5.value, calc_field3.value, calc_field1.value);
+        }
+
+        const result2_title = document.getElementById("result2-title");
+        const results_title2 = document.getElementById("results-title2");
+
+        result2_title.innerText = Math.floor(bodyfat * 10) / 10 + "% Body Fat";
+        results_title2.innerText = Math.floor(bodyfat * 10) / 10 + "% Body Fat";
+    })
 }
 
 function calculateBodyFatMen(waist, neck, height) {
@@ -63,6 +92,11 @@ function calculateBodyFatWomen(waist, neck, height, hip) {
 }
 
 function calculateLeanMassMen(height, Weight) {
-    const denominator = 0.32810;
+    const denominator = 0.32810 * Weight + 0.33929 * height - 29.5336;
+    return denominator;
+}
+
+function calculateLeanMassWomen(height, Weight) {
+    const denominator = 0.29569 * Weight + 0.41813 * height - 43.2933;
     return denominator;
 }
