@@ -76,10 +76,12 @@ function leanmasscalculation() {
     calc_field5.placeholder = "Enter Waist Circumference";
 
     submit.addEventListener("click", function() {
+        let result2 = 0;
+
         if (MorF1.checked) {
-            let result2 = calculateLeanMassWomen(calc_field1.value, calc_field2.value)
+            result2 = calculateLeanMassWomen(calc_field1.value, calc_field2.value)
         } else {
-            let result2 = calculateLeanMassMen(calc_field1.value, calc_field2.value)
+            result2 = calculateLeanMassMen(calc_field1.value, calc_field2.value)
         }
 
         let last_result = (Math.floor(result2 * 10) / 10) + " Kg Mass"
