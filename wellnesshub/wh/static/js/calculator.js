@@ -5,6 +5,8 @@ const calc_field4 = document.getElementById("calc_field4");
 const calc_field5 = document.getElementById("calc_field5");
 const calc_field6 = document.getElementById("calc_field6");
 
+const calculator_title = document.getElementById("calculator_title");
+
 const MorF1 = document.getElementById("MorF1"); // Female
 const MorF2 = document.getElementById("MorF2"); // Male
 
