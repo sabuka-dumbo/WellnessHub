@@ -19,8 +19,6 @@ addEventListener("DOMContentLoaded", bodyfatcalculation())
 function bodyfatcalculation() {
     calculator_title.innerText = "Body Fat Calculator:"
 
-    calculator_title.innerText = "Lean Body Mass Calculator:"
-
     calc_field1.style.opacity = "100%";
     calc_field2.style.opacity = "100%";
     calc_field3.style.opacity = "100%";
